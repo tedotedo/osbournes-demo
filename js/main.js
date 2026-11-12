@@ -1,5 +1,6 @@
 /* ==========================================================================
-   Osbournes — Client-Side Mobile Nav, Accessible Menu Tabs & Booking Form
+   Osbournes — Client-Side Symmetrical Fascia Nav, Chalkboard Slate Filter,
+   Accessible WAI-ARIA Menu Tabs & Client-Side Booking Form
    Zero external network calls · Keyboard accessible · Concept demonstration
    ========================================================================== */
 
@@ -8,7 +9,7 @@
 
   var DEMO_SUBMIT_TEXT = 'Demo only \u2013 in the live site this would go straight to Osbournes.';
 
-  /* 1. Keyboard-Accessible Mobile Navigation */
+  /* 1. Keyboard-Accessible Mobile Fascia Navigation */
   var navToggle = document.querySelector('.nav-toggle');
   var primaryNav = document.getElementById('primary-nav');
 
@@ -54,17 +55,50 @@
     });
 
     window.addEventListener('resize', function () {
-      if (window.innerWidth >= 900 && navToggle.getAttribute('aria-expanded') === 'true') {
+      if (window.innerWidth >= 960 && navToggle.getAttribute('aria-expanded') === 'true') {
         closeMobileNav(false);
       }
     });
   }
 
-  /* 2. Accessible WAI-ARIA Tabbed Menu Layout (menus.html) */
-  var tabList = document.querySelector('[role="tablist"]');
+  /* 2. Interactive "High Street Chalkboard Slate" Filter (index.html) */
+  var chalkButtons = document.querySelectorAll('.chalk-filter-btn[data-chalk-filter]');
+  var chalkEntries = document.querySelectorAll('.chalk-entry[data-chalk-category]');
+  var chalkStatus = document.getElementById('chalk-status');
+
+  if (chalkButtons.length > 0 && chalkEntries.length > 0) {
+    chalkButtons.forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var selected = btn.getAttribute('data-chalk-filter');
+        var visibleCount = 0;
+
+        chalkButtons.forEach(function (b) {
+          b.setAttribute('aria-pressed', b === btn ? 'true' : 'false');
+        });
+
+        chalkEntries.forEach(function (entry) {
+          var cat = entry.getAttribute('data-chalk-category');
+          var show = selected === 'all' || cat === selected;
+          entry.hidden = !show;
+          if (show) visibleCount += 1;
+        });
+
+        if (chalkStatus) {
+          if (selected === 'all') {
+            chalkStatus.textContent = 'Showing all ' + visibleCount + ' High Street house sessions on the board.';
+          } else {
+            chalkStatus.textContent = 'Showing ' + visibleCount + ' chalkboard listing' + (visibleCount === 1 ? '' : 's') + ' for "' + btn.textContent.trim() + '".';
+          }
+        }
+      });
+    });
+  }
+
+  /* 3. Accessible WAI-ARIA Tabbed Menu Layout (menus.html) */
+  var tabList = document.querySelector('.menu-tablist[role="tablist"]');
   if (tabList) {
     var tabs = Array.prototype.slice.call(tabList.querySelectorAll('[role="tab"]'));
-    var panels = Array.prototype.slice.call(document.querySelectorAll('[role="tabpanel"]'));
+    var panels = Array.prototype.slice.call(document.querySelectorAll('.menu-board-panel[role="tabpanel"]'));
 
     function activateTab(targetTab, moveFocus) {
       var targetPanelId = targetTab.getAttribute('aria-controls');
@@ -119,7 +153,7 @@
     }
   }
 
-  /* 3. What's On Quick-Select Buttons (whats-on-bookings.html) */
+  /* 4. What's On Quick-Select Buttons (whats-on-bookings.html) */
   var bookingTypeButtons = document.querySelectorAll('[data-booking-type]');
   var bookingTypeSelect = document.getElementById('osb-type');
 
@@ -142,7 +176,7 @@
     });
   });
 
-  /* 4. Accessible Client-Side Dummy Form Validation & Submission */
+  /* 5. Accessible Client-Side Dummy Form Validation & Submission */
   function validateField(field) {
     var errId = field.getAttribute('aria-describedby');
     var errEl = errId ? document.getElementById(errId) : null;

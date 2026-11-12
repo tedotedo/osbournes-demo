@@ -1,6 +1,9 @@
 /* ==========================================================================
-   Osbournes (24 High Street, Yarm) — Independent Pub & Brunch Bar Stylesheet
-   Self-hosted Playfair Display & Work Sans · Mobile-first · WCAG AA Contrast
+   Osbournes (No. 24 High Street, Yarm) — Victorian Gilded Public House Mirror,
+   Tavern Signboard Fascia & Slate Chalkboard Broadsheet Stylesheet
+   Deep Coach Green (#101B17) · Aged Gilded Brass (#D4A656) · Tavern Cream (#F4ECD8)
+   Copper Ale (#B85328 / #A6461E) · Deep Oxblood (#3B1615) · WCAG AA/AAA Contrast
+   Self-hosted Playfair Display & Work Sans WOFF2 only · Zero external requests
    ========================================================================== */
 
 @font-face {
@@ -28,33 +31,35 @@
 }
 
 :root {
-  --racing-green: #17231E;
-  --racing-panel: #1F2F28;
-  --racing-border: #354D42;
-  --malt-cream: #F7F2E7;
-  --parchment: #EFE7D6;
-  --parchment-deep: #E2D7C1;
-  --card-cream: #FCF9F2;
-  --copper: #AD5122;
-  --copper-hover: #8E4018;
-  --copper-text: #8C3E16;
-  --brass: #D8A24A;
-  --brass-muted: #9E742F;
-  --ink: #17231E;
-  --ink-muted: #3E4C46;
-  --rule-light: #D4C8B0;
+  --coach-green: #101B17;
+  --coach-panel: #172620;
+  --coach-slate: #141D19;
+  --coach-border: #334A40;
+  --oxblood: #3B1615;
+  --oxblood-border: #6A2E2B;
+  --tavern-cream: #F4ECD8;
+  --parchment-warm: #E9DEC5;
+  --broadsheet-paper: #FAF5E8;
+  --brass: #D4A656;
+  --brass-bright: #E4BC72;
+  --brass-dim: #967130;
+  --copper-ale: #B85328;
+  --copper-btn: #A6461E;
+  --copper-hover: #883614;
+  --copper-ink: #873513;
+  --ink: #141F1A;
+  --ink-muted: #384740;
+  --rule-broadsheet: #CBBFA4;
 
-  --ph-bg: #F6E7DC;
-  --ph-border: #C99678;
-  --ph-text: #682E10;
+  --ph-bg: #F6E6DA;
+  --ph-border: #C48F70;
+  --ph-text: #652A0D;
 
   --font-display: 'Playfair Display', Georgia, 'Times New Roman', serif;
   --font-sans: 'Work Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 
-  --radius-sharp: 4px;
-  --radius-card: 8px;
-  --shadow-board: 0 12px 30px rgba(23, 35, 30, 0.08);
-  --container-max: 1200px;
+  --radius-sharp: 3px;
+  --container-max: 1240px;
 }
 
 *,
@@ -83,7 +88,7 @@ html {
 
 body {
   margin: 0;
-  background-color: var(--malt-cream);
+  background-color: var(--tavern-cream);
   color: var(--ink);
   font-family: var(--font-sans);
   font-size: 1rem;
@@ -91,10 +96,10 @@ body {
   font-weight: 400;
   max-width: 100%;
   overflow-x: clip;
-  padding-bottom: 4.8rem;
+  padding-bottom: 4.85rem;
 }
 
-@media (min-width: 900px) {
+@media (min-width: 960px) {
   body {
     padding-bottom: 0;
   }
@@ -108,7 +113,7 @@ svg {
 }
 
 a {
-  color: var(--copper-text);
+  color: var(--copper-ink);
   text-underline-offset: 0.2em;
   transition: color 0.16s ease, background-color 0.16s ease, border-color 0.16s ease;
 }
@@ -118,7 +123,7 @@ a:hover {
 }
 
 :focus-visible {
-  outline: 3px solid var(--copper);
+  outline: 3px solid var(--copper-btn);
   outline-offset: 3px;
 }
 
@@ -135,8 +140,8 @@ a:hover {
   position: absolute;
   left: 0.75rem;
   top: -100px;
-  z-index: 2000;
-  background-color: var(--copper);
+  z-index: 2200;
+  background-color: var(--copper-btn);
   color: #FFFFFF;
   padding: 0.65rem 1.1rem;
   border-radius: var(--radius-sharp);
@@ -148,15 +153,15 @@ a:hover {
   top: 0.75rem;
 }
 
-/* Persistent Slim Top Concept Banner */
+/* 1. Persistent Slim Top Concept Banner */
 .concept-banner {
-  background-color: #101915;
-  color: var(--malt-cream);
-  font-size: 0.84rem;
+  background-color: #0B1310;
+  color: var(--tavern-cream);
+  font-size: 0.82rem;
   line-height: 1.45;
-  padding: 0.52rem 1rem;
+  padding: 0.48rem 1rem;
   text-align: center;
-  border-bottom: 1px solid var(--racing-border);
+  border-bottom: 1px solid var(--coach-border);
   overflow-wrap: anywhere;
 }
 
@@ -164,7 +169,7 @@ a:hover {
   margin: 0 auto;
   max-width: var(--container-max);
   font-weight: 500;
-  letter-spacing: 0.01em;
+  letter-spacing: 0.015em;
 }
 
 /* Containers & Sections */
@@ -172,26 +177,26 @@ a:hover {
   width: 100%;
   max-width: var(--container-max);
   margin: 0 auto;
-  padding-left: clamp(1rem, 4vw, 2.25rem);
-  padding-right: clamp(1rem, 4vw, 2.25rem);
+  padding-left: clamp(1rem, 3.8vw, 2.25rem);
+  padding-right: clamp(1rem, 3.8vw, 2.25rem);
 }
 
 .section {
-  padding-top: clamp(3.25rem, 6vw, 5.25rem);
-  padding-bottom: clamp(3.25rem, 6vw, 5.25rem);
+  padding-top: clamp(3.5rem, 6.2vw, 5.5rem);
+  padding-bottom: clamp(3.5rem, 6.2vw, 5.5rem);
 }
 
 .section-parchment {
-  background-color: var(--parchment);
-  border-top: 1px solid var(--rule-light);
-  border-bottom: 1px solid var(--rule-light);
+  background-color: var(--parchment-warm);
+  border-top: 2px solid var(--rule-broadsheet);
+  border-bottom: 2px solid var(--rule-broadsheet);
 }
 
-.section-racing {
-  background-color: var(--racing-green);
-  color: var(--malt-cream);
-  border-top: 2px solid var(--brass);
-  border-bottom: 2px solid var(--brass);
+.section-coach {
+  background-color: var(--coach-green);
+  color: var(--tavern-cream);
+  border-top: 4px double var(--brass);
+  border-bottom: 4px double var(--brass);
 }
 
 /* Typography */
@@ -201,7 +206,7 @@ h3,
 h4 {
   font-family: var(--font-display);
   font-weight: 700;
-  line-height: 1.16;
+  line-height: 1.14;
   margin-top: 0;
   color: var(--ink);
 }
@@ -210,22 +215,23 @@ h4 {
 .dark-panel h2,
 .dark-panel h3,
 .dark-panel h4 {
-  color: var(--malt-cream);
+  color: var(--tavern-cream);
 }
 
 h1 {
-  font-size: clamp(2.1rem, 4.5vw, 3.45rem);
-  margin-bottom: 1.05rem;
+  font-size: clamp(2.1rem, 4.6vw, 3.65rem);
+  margin-bottom: 1rem;
 }
 
 h1 em,
-h2 em {
+h2 em,
+h3 em {
   font-style: italic;
   font-weight: 500;
 }
 
 h2 {
-  font-size: clamp(1.7rem, 3.2vw, 2.5rem);
+  font-size: clamp(1.75rem, 3.3vw, 2.6rem);
   margin-bottom: 0.85rem;
 }
 
@@ -242,14 +248,14 @@ p {
 .kicker {
   display: inline-block;
   font-family: var(--font-sans);
-  font-size: 0.78rem;
+  font-size: 0.76rem;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.12em;
-  color: var(--copper-text);
+  letter-spacing: 0.14em;
+  color: var(--copper-ink);
   margin-bottom: 0.75rem;
   padding-bottom: 0.25rem;
-  border-bottom: 2px solid var(--copper);
+  border-bottom: 2px solid var(--copper-ale);
 }
 
 .dark-panel .kicker {
@@ -258,16 +264,16 @@ p {
 }
 
 .lead {
-  font-size: clamp(1.04rem, 1.45vw, 1.18rem);
+  font-size: clamp(1.03rem, 1.45vw, 1.18rem);
   color: var(--ink-muted);
   max-width: 62ch;
 }
 
 .dark-panel .lead {
-  color: #D9D2C3;
+  color: #E5DEC9;
 }
 
-/* Placeholder Tags (.ph) — Overflow & Contrast Safe */
+/* Placeholder Tags (.ph) — Strict Overflow & Contrast Compliance */
 .ph {
   display: inline-block;
   max-width: 100%;
@@ -275,9 +281,9 @@ p {
   color: var(--ph-text);
   border: 1px dashed var(--ph-border);
   border-radius: var(--radius-sharp);
-  padding: 0.14rem 0.5rem;
+  padding: 0.13rem 0.5rem;
   font-family: var(--font-sans);
-  font-size: 0.86rem;
+  font-size: 0.85rem;
   font-weight: 600;
   line-height: 1.4;
   overflow-wrap: anywhere;
@@ -286,99 +292,123 @@ p {
 }
 
 .dark-panel .ph {
-  background-color: #24362E;
-  color: #F7E8D4;
+  background-color: #20322B;
+  color: #FAF0DC;
   border-color: var(--brass);
 }
 
-/* Pub Signboard Header & Mobile Nav */
+/* ==========================================================================
+   2. Bespoke Header Architecture — Symmetrical Gilded Pub Signboard Fascia
+   Double-brass top/bottom borders; links split symmetrically left & right
+   of central ornate "No. 24 · OSBOURNES · YARM HIGH STREET" Tavern Crest!
+   ========================================================================== */
 .site-header {
-  background-color: var(--racing-green);
-  color: var(--malt-cream);
-  border-bottom: 2px solid var(--brass);
+  background-color: var(--coach-green);
+  color: var(--tavern-cream);
+  border-top: 3px double var(--brass);
+  border-bottom: 4px double var(--brass);
   position: sticky;
   top: 0;
   z-index: 1000;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.28);
 }
 
-.header-inner {
+.fascia-inner {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0.5rem clamp(0.85rem, 3.5vw, 2.25rem);
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 1rem;
-  min-height: 4.65rem;
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
+  gap: 0.75rem;
+  min-height: 4.8rem;
+  position: relative;
 }
 
-.brand-link {
+.fascia-crest {
   display: inline-flex;
   align-items: center;
-  gap: 0.8rem;
+  gap: 0.7rem;
   text-decoration: none;
-  color: var(--malt-cream);
+  color: var(--tavern-cream);
   min-width: 0;
 }
 
-.brand-link:hover {
+.fascia-crest:hover {
   color: var(--brass);
 }
 
-.brand-crest {
-  width: 2.8rem;
-  height: 2.8rem;
+.fascia-crest-emblem {
+  width: 2.65rem;
+  height: 2.65rem;
   flex-shrink: 0;
 }
 
-.brand-title-wrap {
+.fascia-crest-text {
   display: flex;
   flex-direction: column;
   min-width: 0;
 }
 
-.brand-name {
-  font-family: var(--font-display);
-  font-size: clamp(1.25rem, 2.5vw, 1.55rem);
+.crest-no {
+  font-family: var(--font-sans);
+  font-size: 0.68rem;
   font-weight: 700;
-  line-height: 1.08;
-  letter-spacing: 0.02em;
-  color: var(--malt-cream);
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: var(--brass);
+  line-height: 1.1;
 }
 
-.brand-location {
-  font-size: 0.74rem;
+.crest-name {
+  font-family: var(--font-display);
+  font-size: clamp(1.22rem, 2.6vw, 1.72rem);
+  font-weight: 700;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
-  letter-spacing: 0.1em;
-  color: var(--brass);
+  line-height: 1.08;
+  color: var(--tavern-cream);
+}
+
+.crest-street {
+  font-family: var(--font-sans);
+  font-size: 0.68rem;
   font-weight: 600;
-  margin-top: 0.15rem;
+  text-transform: uppercase;
+  letter-spacing: 0.13em;
+  color: #D8CEB8;
+  margin-top: 0.12rem;
 }
 
 .nav-toggle {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 0.45rem;
+  gap: 0.42rem;
   min-height: 44px;
   min-width: 44px;
-  padding: 0.5rem 0.85rem;
-  background-color: var(--racing-panel);
-  color: var(--malt-cream);
+  padding: 0.48rem 0.85rem;
+  background-color: var(--coach-panel);
+  color: var(--tavern-cream);
   border: 1.5px solid var(--brass);
   border-radius: var(--radius-sharp);
   font-family: var(--font-sans);
-  font-size: 0.88rem;
-  font-weight: 600;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
   cursor: pointer;
+  flex-shrink: 0;
 }
 
 .nav-toggle:hover {
-  background-color: #293D34;
+  background-color: #22372F;
+  color: var(--brass);
 }
 
 .nav-toggle-icon {
-  width: 1.15rem;
-  height: 1.15rem;
+  width: 1.1rem;
+  height: 1.1rem;
 }
 
 .primary-nav {
@@ -387,43 +417,48 @@ p {
   top: 100%;
   left: 0;
   right: 0;
-  background-color: var(--racing-green);
-  border-bottom: 2px solid var(--brass);
-  box-shadow: 0 20px 38px rgba(0, 0, 0, 0.35);
-  padding: 1rem clamp(1rem, 4vw, 2.25rem) 1.4rem;
+  background-color: var(--coach-green);
+  border-bottom: 4px double var(--brass);
+  box-shadow: 0 22px 40px rgba(0, 0, 0, 0.45);
+  padding: 0.85rem clamp(1rem, 3.8vw, 2.25rem) 1.35rem;
 }
 
 .primary-nav.is-open {
   display: block;
 }
 
-.nav-list {
+.nav-wing {
   list-style: none;
   margin: 0;
   padding: 0;
   display: flex;
   flex-direction: column;
-  gap: 0.35rem;
+  gap: 0.25rem;
+}
+
+.nav-wing + .nav-wing {
+  margin-top: 0.25rem;
 }
 
 .nav-link {
   display: block;
-  padding: 0.7rem 0.9rem;
+  padding: 0.72rem 0.85rem;
   border-radius: var(--radius-sharp);
   text-decoration: none;
-  color: var(--malt-cream);
-  font-weight: 500;
-  font-size: 0.98rem;
+  color: var(--tavern-cream);
+  font-weight: 600;
+  font-size: 0.88rem;
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
 }
 
 .nav-link:hover,
 .nav-link[aria-current="page"] {
-  background-color: var(--racing-panel);
+  background-color: var(--coach-panel);
   color: var(--brass);
 }
 
 .nav-link[aria-current="page"] {
-  font-weight: 600;
   border-left: 3px solid var(--brass);
 }
 
@@ -431,29 +466,89 @@ p {
   margin-top: 0.5rem;
 }
 
-@media (min-width: 900px) {
+@media (min-width: 960px) {
   .nav-toggle {
     display: none;
   }
 
+  .fascia-inner {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    gap: 1.5rem;
+    padding-top: 0.65rem;
+    padding-bottom: 0.65rem;
+    min-height: 5.5rem;
+  }
+
+  .fascia-crest {
+    grid-column: 2;
+    grid-row: 1;
+    z-index: 2;
+    flex-direction: column;
+    text-align: center;
+    gap: 0.15rem;
+    padding: 0.2rem 1.25rem;
+    border-left: 1px solid rgba(212, 166, 86, 0.45);
+    border-right: 1px solid rgba(212, 166, 86, 0.45);
+  }
+
+  .fascia-crest-emblem {
+    display: none;
+  }
+
+  .fascia-crest-text {
+    align-items: center;
+  }
+
   .primary-nav {
-    display: block;
+    display: grid;
+    grid-column: 1 / -1;
+    grid-row: 1;
+    grid-template-columns: 1fr 15.5rem 1fr;
+    align-items: center;
+    gap: 1.5rem;
     position: static;
     background: transparent;
     border-bottom: none;
     box-shadow: none;
     padding: 0;
+    pointer-events: none;
   }
 
-  .nav-list {
+  @supports (grid-template-columns: subgrid) {
+    .primary-nav {
+      grid-template-columns: subgrid;
+    }
+  }
+
+  .nav-wing {
     flex-direction: row;
     align-items: center;
-    gap: 0.3rem;
+    gap: 0.5rem;
+    pointer-events: auto;
+  }
+
+  .nav-wing + .nav-wing {
+    margin-top: 0;
+  }
+
+  .nav-wing-left {
+    grid-column: 1;
+    justify-content: flex-end;
+    padding-right: 0.5rem;
+  }
+
+  .nav-wing-right {
+    grid-column: 3;
+    justify-content: flex-start;
+    padding-left: 0.5rem;
   }
 
   .nav-link {
-    padding: 0.5rem 0.85rem;
-    font-size: 0.94rem;
+    padding: 0.48rem 0.75rem;
+    font-size: 0.8rem;
+    letter-spacing: 0.1em;
   }
 
   .nav-link[aria-current="page"] {
@@ -463,11 +558,13 @@ p {
 
   .nav-cta-li {
     margin-top: 0;
-    margin-left: 0.5rem;
+    margin-left: 0.35rem;
   }
 }
 
-/* Buttons */
+/* ==========================================================================
+   Buttons — Brass & Copper Public House Craft
+   ========================================================================== */
 .btn {
   display: inline-flex;
   align-items: center;
@@ -477,10 +574,10 @@ p {
   padding: 0.72rem 1.35rem;
   border-radius: var(--radius-sharp);
   font-family: var(--font-sans);
-  font-size: 0.94rem;
-  font-weight: 600;
+  font-size: 0.86rem;
+  font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.08em;
   line-height: 1.25;
   text-decoration: none;
   border: 1.5px solid transparent;
@@ -491,34 +588,36 @@ p {
 }
 
 .btn-copper {
-  background-color: var(--copper);
+  background-color: var(--copper-btn);
+  border-color: var(--brass);
   color: #FFFFFF;
 }
 
 .btn-copper:hover {
   background-color: var(--copper-hover);
+  border-color: var(--brass-bright);
   color: #FFFFFF;
 }
 
 .btn-brass-outline {
-  background-color: transparent;
-  color: var(--malt-cream);
+  background-color: rgba(16, 27, 23, 0.78);
+  color: var(--tavern-cream);
   border-color: var(--brass);
 }
 
 .btn-brass-outline:hover {
-  background-color: var(--racing-panel);
-  color: var(--brass);
+  background-color: var(--brass);
+  color: var(--coach-green);
 }
 
 .btn-racing {
-  background-color: var(--racing-green);
-  color: var(--malt-cream);
-  border-color: var(--racing-green);
+  background-color: var(--coach-green);
+  color: var(--tavern-cream);
+  border-color: var(--coach-green);
 }
 
 .btn-racing:hover {
-  background-color: var(--racing-panel);
+  background-color: var(--coach-panel);
   color: var(--brass);
 }
 
@@ -530,13 +629,13 @@ p {
 
 .btn-ink-outline:hover {
   background-color: var(--ink);
-  color: var(--malt-cream);
+  color: var(--tavern-cream);
 }
 
 .btn-sm {
-  min-height: 42px;
-  padding: 0.5rem 0.95rem;
-  font-size: 0.82rem;
+  min-height: 41px;
+  padding: 0.48rem 0.92rem;
+  font-size: 0.78rem;
 }
 
 .btn-row {
@@ -546,119 +645,469 @@ p {
   margin-top: 1.5rem;
 }
 
-/* Hero Banner (Dark Racing-Slate Pub Signboard Surround) */
-.pub-hero {
-  background-color: var(--racing-green);
-  color: var(--malt-cream);
-  padding-top: clamp(2.5rem, 5.5vw, 4.5rem);
-  padding-bottom: clamp(3rem, 6vw, 5rem);
-  border-bottom: 3px solid var(--brass);
+.btn-row-center {
+  justify-content: center;
 }
 
-.hero-split {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: clamp(2rem, 4.5vw, 3.5rem);
+/* ==========================================================================
+   3. Hero Spatial Composition — Ornate Chamfered Gilded Pub-Mirror Stage
+      + Custom SVG Brass Filigree Corners + Three Brass-Pinned Tavern Plaques
+   ========================================================================== */
+.pub-mirror-stage-section {
+  background:
+    radial-gradient(circle at 50% 0%, #1D3028 0%, #101B17 70%);
+  color: var(--tavern-cream);
+  padding-top: clamp(1.5rem, 3.5vw, 2.75rem);
+  padding-bottom: clamp(2.75rem, 5.5vw, 4.5rem);
+  border-bottom: 4px double var(--brass);
+}
+
+.victorian-mirror-frame {
+  position: relative;
+  border: 2px solid var(--brass);
+  padding: clamp(0.45rem, 1.2vw, 0.75rem);
+  background: linear-gradient(145deg, #251B12 0%, #101B17 50%, #251B12 100%);
+  box-shadow: 0 26px 56px rgba(0, 0, 0, 0.5);
+}
+
+.mirror-bevel {
+  position: relative;
+  border: 1.5px solid rgba(212, 166, 86, 0.82);
+  overflow: hidden;
+  min-height: clamp(24rem, 48vw, 33.5rem);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
+  padding: clamp(2.5rem, 5.5vw, 4.5rem) clamp(1.25rem, 4.5vw, 3.5rem) clamp(3.6rem, 6.5vw, 5.2rem);
+  text-align: center;
 }
 
-@media (min-width: 960px) {
-  .hero-split {
-    grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr);
+.mirror-bg-figure {
+  margin: 0;
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.mirror-bg-figure img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.mirror-bg-figure::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 50% 45%, rgba(12, 20, 17, 0.66) 0%, rgba(10, 17, 14, 0.88) 100%),
+    linear-gradient(180deg, rgba(12, 20, 17, 0.84) 0%, rgba(12, 20, 17, 0.64) 48%, rgba(12, 20, 17, 0.88) 100%);
+}
+
+/* Custom Inline SVG Brass Filigree Corner Flourishes */
+.mirror-filigree {
+  position: absolute;
+  width: clamp(2.1rem, 4.5vw, 3.4rem);
+  height: clamp(2.1rem, 4.5vw, 3.4rem);
+  z-index: 3;
+  pointer-events: none;
+  color: var(--brass);
+}
+
+.mirror-filigree.tl {
+  top: 0.45rem;
+  left: 0.45rem;
+}
+
+.mirror-filigree.tr {
+  top: 0.45rem;
+  right: 0.45rem;
+  transform: scaleX(-1);
+}
+
+.mirror-filigree.bl {
+  bottom: 0.45rem;
+  left: 0.45rem;
+  transform: scaleY(-1);
+}
+
+.mirror-filigree.br {
+  bottom: 0.45rem;
+  right: 0.45rem;
+  transform: scale(-1, -1);
+}
+
+.mirror-broadsheet-copy {
+  position: relative;
+  z-index: 2;
+  max-width: 48rem;
+  margin: 0 auto;
+}
+
+.brass-ribbon-plaque {
+  display: inline-block;
+  background-color: var(--brass);
+  color: #101B17;
+  font-family: var(--font-sans);
+  font-size: 0.74rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  padding: 0.32rem 0.95rem;
+  border: 1px solid #FFF2D2;
+  border-radius: 2px;
+  margin-bottom: 1.15rem;
+}
+
+.mirror-broadsheet-copy h1 {
+  color: #FAF5E8;
+  text-shadow: 0 2px 16px rgba(0, 0, 0, 0.55);
+  margin-bottom: 1rem;
+}
+
+.mirror-broadsheet-copy h1 em {
+  color: var(--brass-bright);
+}
+
+.mirror-lead {
+  font-size: clamp(1rem, 1.45vw, 1.18rem);
+  color: #F4ECD8;
+  max-width: 56ch;
+  margin: 0 auto 0.25rem;
+}
+
+.mirror-divider-svg {
+  width: 9.5rem;
+  height: 1rem;
+  margin: 0.9rem auto 1.1rem;
+  color: var(--brass);
+}
+
+.mirror-caption-plate {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 1.65rem;
+  z-index: 3;
+  background-color: rgba(12, 20, 17, 0.92);
+  color: #E8E0CC;
+  border: 1px solid rgba(212, 166, 86, 0.55);
+  padding: 0.22rem 0.75rem;
+  font-size: 0.72rem;
+  letter-spacing: 0.02em;
+  line-height: 1.35;
+  width: max-content;
+  max-width: calc(100% - 5rem);
+}
+
+@media (max-width: 819px) {
+  .mirror-caption-plate {
+    bottom: 0.75rem;
+    max-width: calc(100% - 4rem);
   }
 }
 
-.hero-meta-strip {
-  margin-top: 1.85rem;
-  padding-top: 1.15rem;
-  border-top: 1px solid var(--racing-border);
+/* Three Physical Brass-Pinned Tavern Plaques Docked Across Base of Mirror */
+.tavern-plaques-dock {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 0.75rem;
-  font-size: 0.9rem;
-  color: #D9D2C3;
+  gap: 0.95rem;
+  margin-top: 1rem;
+  position: relative;
+  z-index: 4;
 }
 
-@media (min-width: 560px) {
-  .hero-meta-strip {
+@media (min-width: 820px) {
+  .tavern-plaques-dock {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    margin-top: -1.35rem;
+    padding: 0 clamp(0.75rem, 2.5vw, 2rem);
+  }
+}
+
+.tavern-plaque {
+  position: relative;
+  background: linear-gradient(180deg, #1B2B24 0%, #121E19 100%);
+  border: 1.5px solid var(--brass);
+  padding: 1.25rem 1.35rem;
+  box-shadow: 0 12px 26px rgba(0, 0, 0, 0.36);
+  min-width: 0;
+}
+
+.tavern-plaque-oxblood {
+  background: linear-gradient(180deg, #3B1615 0%, #260E0D 100%);
+}
+
+/* Four Physical Brass Screw-Head Rivets on Every Tavern Plaque */
+.brass-screw {
+  position: absolute;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 35%, #F6DF9E 0%, #D4A656 55%, #75551E 100%);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.65);
+}
+
+.brass-screw.tl { top: 7px; left: 7px; }
+.brass-screw.tr { top: 7px; right: 7px; }
+.brass-screw.bl { bottom: 7px; left: 7px; }
+.brass-screw.br { bottom: 7px; right: 7px; }
+
+.plaque-kicker {
+  display: block;
+  font-size: 0.7rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--brass);
+  margin-bottom: 0.3rem;
+}
+
+.plaque-title {
+  font-family: var(--font-display);
+  font-size: 1.22rem;
+  color: #FAF5E8;
+  margin-bottom: 0.35rem;
+}
+
+.plaque-desc {
+  font-size: 0.87rem;
+  color: #DFD7C4;
+  margin: 0;
+  line-height: 1.45;
+}
+
+/* ==========================================================================
+   4. Signature Section — "The High Street Chalkboard Slate"
+   Framed slate pub chalkboard with hand-ruled chalk dividers & vibe filter
+   ========================================================================== */
+.chalkboard-frame {
+  background: linear-gradient(145deg, #2C1C12 0%, #1B120C 100%);
+  border: 3px solid var(--brass);
+  padding: clamp(0.55rem, 1.5vw, 0.95rem);
+  box-shadow: 0 22px 48px rgba(16, 27, 23, 0.22);
+}
+
+.chalkboard-slate {
+  background-color: var(--coach-slate);
+  background-image:
+    radial-gradient(rgba(244, 236, 216, 0.04) 1px, transparent 0);
+  background-size: 18px 18px;
+  border: 2px dashed rgba(244, 236, 216, 0.34);
+  padding: clamp(1.35rem, 3.8vw, 2.75rem);
+  color: var(--tavern-cream);
+}
+
+.chalk-header {
+  text-align: center;
+  max-width: 44rem;
+  margin: 0 auto 1.75rem;
+  padding-bottom: 1.35rem;
+  border-bottom: 2px double rgba(244, 236, 216, 0.32);
+}
+
+.chalk-eyebrow {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: var(--brass-bright);
+  margin-bottom: 0.5rem;
+}
+
+.chalk-filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.chalk-filter-btn {
+  min-height: 42px;
+  padding: 0.45rem 0.95rem;
+  background-color: rgba(255, 255, 255, 0.04);
+  color: var(--tavern-cream);
+  border: 1.5px solid rgba(244, 236, 216, 0.38);
+  border-radius: var(--radius-sharp);
+  font-family: var(--font-sans);
+  font-size: 0.82rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  cursor: pointer;
+  transition: all 0.16s ease;
+}
+
+.chalk-filter-btn:hover {
+  border-color: var(--brass);
+  color: var(--brass-bright);
+}
+
+.chalk-filter-btn[aria-pressed="true"] {
+  background-color: var(--brass);
+  border-color: var(--brass);
+  color: #101B17;
+}
+
+.chalk-status-line {
+  text-align: center;
+  font-size: 0.85rem;
+  color: #D8D0BE;
+  margin-bottom: 1.5rem;
+  font-style: italic;
+}
+
+.chalk-entries-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.15rem;
+}
+
+@media (min-width: 820px) {
+  .chalk-entries-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
-.hero-meta-label {
-  display: block;
-  font-size: 0.74rem;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: var(--brass);
-  font-weight: 700;
-  margin-bottom: 0.15rem;
-}
-
-/* Pub Figures & Images */
-.pub-figure {
-  margin: 0;
-  background-color: var(--racing-panel);
-  border: 2px solid var(--brass);
-  border-radius: var(--radius-card);
-  overflow: hidden;
-  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.28);
+.chalk-entry {
+  background-color: rgba(10, 16, 13, 0.55);
+  border: 1px solid rgba(244, 236, 216, 0.25);
+  border-left: 4px solid var(--brass);
+  padding: 1.25rem 1.35rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
   min-width: 0;
 }
 
-.pub-figure.light-frame {
-  background-color: var(--parchment);
-  border: 1.5px solid var(--brass-muted);
-  box-shadow: var(--shadow-board);
+.chalk-entry[hidden] {
+  display: none;
+}
+
+.chalk-entry-tag {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.13em;
+  color: var(--brass-bright);
+}
+
+.chalk-entry h3 {
+  font-size: 1.3rem;
+  color: #FAF5E8;
+  margin-bottom: 0.15rem;
+}
+
+.chalk-entry p {
+  font-size: 0.91rem;
+  color: #E2DAC8;
+  margin-bottom: 0.35rem;
+}
+
+.chalk-entry-foot {
+  margin-top: auto;
+  padding-top: 0.65rem;
+  border-top: 1px dashed rgba(244, 236, 216, 0.22);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.6rem;
+}
+
+/* ==========================================================================
+   5. Public House Menu & Snug Broadsheet Ledger (index.html)
+   ========================================================================== */
+.broadsheet-ledger-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: clamp(2rem, 4.5vw, 3.25rem);
+  align-items: start;
+}
+
+@media (min-width: 940px) {
+  .broadsheet-ledger-grid {
+    grid-template-columns: minmax(0, 0.96fr) minmax(0, 1.04fr);
+  }
+}
+
+.pub-figure {
+  margin: 0;
+  position: relative;
+  background-color: var(--broadsheet-paper);
+  border: 2px solid var(--brass-dim);
+  padding: 0.45rem;
+  box-shadow: 0 14px 32px rgba(20, 31, 26, 0.1);
+  min-width: 0;
 }
 
 .pub-figure img {
   width: 100%;
   height: auto;
   object-fit: cover;
-  background-color: #2A3832;
-}
-
-.pub-figure.hero-photo img {
-  aspect-ratio: 1440 / 803;
-}
-
-.pub-figure.feature-photo img {
   aspect-ratio: 1200 / 896;
+  border: 1px solid var(--rule-broadsheet);
 }
 
 .pub-figure figcaption {
-  padding: 0.68rem 1rem;
-  background-color: #101915;
-  color: #D9D2C3;
-  border-top: 1px solid var(--racing-border);
-  font-size: 0.82rem;
-  line-height: 1.45;
-}
-
-.pub-figure.light-frame figcaption {
-  background-color: var(--card-cream);
+  padding: 0.65rem 0.75rem 0.3rem;
   color: var(--ink-muted);
-  border-top: 1px solid var(--rule-light);
+  font-size: 0.81rem;
+  line-height: 1.45;
+  font-style: italic;
 }
 
-/* Split Showcase & Cards */
-.split-showcase {
+/* Brass-Cornered Broadsheet Cards */
+.broadsheet-card {
+  position: relative;
+  background-color: var(--broadsheet-paper);
+  border: 1.5px solid var(--rule-broadsheet);
+  border-top: 4px solid var(--coach-green);
+  padding: clamp(1.4rem, 3.2vw, 2.2rem);
+  box-shadow: 0 10px 26px rgba(20, 31, 26, 0.07);
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.broadsheet-card-copper {
+  border-top-color: var(--copper-ale);
+}
+
+.info-ledger {
+  margin: 1rem 0 1.35rem;
   display: grid;
-  grid-template-columns: 1fr;
-  gap: clamp(2rem, 4.5vw, 3.5rem);
-  align-items: center;
+  gap: 0.85rem;
 }
 
-@media (min-width: 940px) {
-  .split-showcase {
-    grid-template-columns: minmax(0, 0.98fr) minmax(0, 1.02fr);
-  }
+.info-ledger > div {
+  padding-bottom: 0.75rem;
+  border-bottom: 1px dashed var(--rule-broadsheet);
 }
 
-.section-intro {
-  max-width: 64ch;
-  margin-bottom: clamp(2rem, 4vw, 3rem);
+.info-ledger > div:last-child {
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.info-ledger dt {
+  font-size: 0.74rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.11em;
+  color: var(--copper-ink);
+}
+
+.info-ledger dd {
+  margin: 0.2rem 0 0;
+  font-size: 0.98rem;
+  font-weight: 500;
+  color: var(--ink);
+  overflow-wrap: anywhere;
 }
 
 .pillars-grid {
@@ -667,26 +1116,10 @@ p {
   gap: 1.4rem;
 }
 
-@media (min-width: 760px) {
+@media (min-width: 780px) {
   .pillars-grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
-}
-
-.pub-card {
-  background-color: var(--card-cream);
-  border: 1px solid var(--rule-light);
-  border-top: 4px solid var(--racing-green);
-  border-radius: var(--radius-card);
-  padding: clamp(1.35rem, 3vw, 1.9rem);
-  box-shadow: var(--shadow-board);
-  display: flex;
-  flex-direction: column;
-  min-width: 0;
-}
-
-.pub-card-copper {
-  border-top-color: var(--copper);
 }
 
 .pub-card-footer {
@@ -694,92 +1127,21 @@ p {
   padding-top: 0.85rem;
 }
 
-/* Brass-Trimmed Dark Noticeboard Cards */
-.bill-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 1.4rem;
+/* ==========================================================================
+   6. Centered Gilded Broadsheet Subpage Headers & Menus (menus.html)
+   ========================================================================== */
+.broadsheet-page-banner {
+  background: radial-gradient(circle at 50% 0%, #1E3229 0%, #101B17 75%);
+  color: var(--tavern-cream);
+  padding-top: clamp(2.25rem, 4.8vw, 3.85rem);
+  padding-bottom: clamp(2.25rem, 4.8vw, 3.6rem);
+  border-bottom: 4px double var(--brass);
+  text-align: center;
 }
 
-@media (min-width: 820px) {
-  .bill-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-}
-
-@media (min-width: 1060px) {
-  .bill-grid-3 {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
-}
-
-.brass-panel {
-  background-color: var(--racing-panel);
-  border: 1.5px solid var(--brass);
-  border-radius: var(--radius-card);
-  padding: clamp(1.4rem, 3vw, 2rem);
-  display: flex;
-  flex-direction: column;
-  min-width: 0;
-}
-
-.brass-tag {
-  display: inline-block;
-  align-self: flex-start;
-  font-size: 0.75rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.09em;
-  color: var(--brass);
-  border: 1px solid var(--brass);
-  padding: 0.2rem 0.6rem;
-  border-radius: var(--radius-sharp);
-  margin-bottom: 0.8rem;
-}
-
-/* Find Us / Contact Grid */
-.find-us-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 1.75rem;
-  align-items: stretch;
-}
-
-@media (min-width: 880px) {
-  .find-us-grid {
-    grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
-  }
-}
-
-.info-ledger {
-  margin: 1rem 0 1.5rem;
-  display: grid;
-  gap: 0.95rem;
-}
-
-.info-ledger dt {
-  font-size: 0.76rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.09em;
-  color: var(--copper-text);
-}
-
-.info-ledger dd {
-  margin: 0.2rem 0 0;
-  font-size: 1rem;
-  font-weight: 500;
-  color: var(--ink);
-  overflow-wrap: anywhere;
-}
-
-/* Accessible Tabbed Menu Board (menus.html) */
-.page-banner {
-  background-color: var(--racing-green);
-  color: var(--malt-cream);
-  padding-top: clamp(2.25rem, 4.5vw, 3.6rem);
-  padding-bottom: clamp(2.1rem, 4vw, 3.2rem);
-  border-bottom: 2px solid var(--brass);
+.broadsheet-page-banner .lead {
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .menu-tablist {
@@ -796,11 +1158,11 @@ p {
 }
 
 .menu-tab {
-  min-height: 50px;
+  min-height: 52px;
   padding: 0.75rem 1rem;
-  background-color: var(--card-cream);
+  background-color: var(--broadsheet-paper);
   color: var(--ink);
-  border: 1.5px solid var(--rule-light);
+  border: 1.5px solid var(--rule-broadsheet);
   border-radius: var(--radius-sharp);
   font-family: var(--font-display);
   font-size: 1.08rem;
@@ -811,23 +1173,23 @@ p {
 }
 
 .menu-tab:hover {
-  border-color: var(--racing-green);
+  border-color: var(--coach-green);
 }
 
 .menu-tab[aria-selected="true"] {
-  background-color: var(--racing-green);
-  color: var(--malt-cream);
-  border-color: var(--racing-green);
+  background-color: var(--coach-green);
+  color: var(--tavern-cream);
+  border-color: var(--brass);
   box-shadow: inset 0 -4px 0 var(--brass);
 }
 
 .menu-board-panel {
-  background-color: var(--card-cream);
-  border: 1.5px solid var(--rule-light);
-  border-top: 4px solid var(--racing-green);
-  border-radius: var(--radius-card);
-  padding: clamp(1.35rem, 3.5vw, 2.5rem);
-  box-shadow: var(--shadow-board);
+  position: relative;
+  background-color: var(--broadsheet-paper);
+  border: 2px solid var(--brass-dim);
+  border-top: 5px solid var(--coach-green);
+  padding: clamp(1.35rem, 3.8vw, 2.75rem);
+  box-shadow: 0 14px 34px rgba(20, 31, 26, 0.09);
 }
 
 .menu-board-panel[hidden] {
@@ -846,7 +1208,7 @@ p {
   font-size: 1.35rem;
   padding-bottom: 0.45rem;
   margin-bottom: 0.9rem;
-  border-bottom: 2px solid var(--parchment-deep);
+  border-bottom: 2px double var(--brass-dim);
   color: var(--ink);
 }
 
@@ -863,7 +1225,7 @@ p {
   flex-direction: column;
   gap: 0.45rem;
   padding: 0.95rem 0;
-  border-bottom: 1px dashed var(--rule-light);
+  border-bottom: 1px dashed var(--rule-broadsheet);
 }
 
 .menu-row:last-child {
@@ -902,7 +1264,51 @@ p {
   flex-shrink: 0;
 }
 
-/* Booking Enquiry Form (whats-on-bookings.html) */
+/* ==========================================================================
+   7. Brass-Trimmed What's On Cards & Booking Enquiry Form (whats-on-bookings)
+   ========================================================================== */
+.bill-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.4rem;
+}
+
+@media (min-width: 820px) {
+  .bill-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1060px) {
+  .bill-grid-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+.brass-panel {
+  position: relative;
+  background-color: var(--coach-panel);
+  border: 1.5px solid var(--brass);
+  padding: clamp(1.4rem, 3vw, 2rem);
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.brass-tag {
+  display: inline-block;
+  align-self: flex-start;
+  font-size: 0.73rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.11em;
+  color: #101B17;
+  background-color: var(--brass);
+  padding: 0.22rem 0.62rem;
+  border-radius: 2px;
+  margin-bottom: 0.85rem;
+}
+
 .enquiry-grid {
   display: grid;
   grid-template-columns: 1fr;
@@ -917,12 +1323,11 @@ p {
 }
 
 .form-board {
-  background-color: var(--card-cream);
-  border: 1.5px solid var(--rule-light);
-  border-top: 4px solid var(--copper);
-  border-radius: var(--radius-card);
+  background-color: var(--broadsheet-paper);
+  border: 2px solid var(--brass-dim);
+  border-top: 5px solid var(--copper-ale);
   padding: clamp(1.4rem, 3.2vw, 2.25rem);
-  box-shadow: var(--shadow-board);
+  box-shadow: 0 12px 30px rgba(20, 31, 26, 0.08);
   min-width: 0;
 }
 
@@ -946,20 +1351,20 @@ p {
 
 .field-group label {
   font-weight: 600;
-  font-size: 0.92rem;
+  font-size: 0.9rem;
   color: var(--ink);
   margin-bottom: 0.38rem;
 }
 
 .req-star {
-  color: var(--copper-text);
+  color: var(--copper-ink);
   margin-left: 0.15rem;
 }
 
 .field-note {
   font-size: 0.82rem;
   color: var(--ink-muted);
-  margin-top: 0.28rem;
+  margin-top: 0.3rem;
 }
 
 .field-group input[type="text"],
@@ -973,11 +1378,11 @@ p {
   min-height: 46px;
   padding: 0.65rem 0.85rem;
   border-radius: var(--radius-sharp);
-  border: 1.5px solid #ACA08B;
+  border: 1.5px solid #9B8E76;
   background-color: #FFFFFF;
   color: var(--ink);
   font-family: var(--font-sans);
-  font-size: 0.98rem;
+  font-size: 0.97rem;
   line-height: 1.4;
 }
 
@@ -989,8 +1394,8 @@ p {
 .field-group input:focus,
 .field-group select:focus,
 .field-group textarea:focus {
-  border-color: var(--racing-green);
-  outline: 3px solid var(--copper);
+  border-color: var(--coach-green);
+  outline: 3px solid var(--copper-btn);
   outline-offset: 1px;
 }
 
@@ -1000,7 +1405,7 @@ p {
 }
 
 .field-error {
-  color: #8F1D1E;
+  color: #8A1C1D;
   font-size: 0.84rem;
   font-weight: 600;
   margin-top: 0.3rem;
@@ -1014,24 +1419,26 @@ p {
   margin-top: 1.2rem;
   padding: 1.1rem 1.25rem;
   border-radius: var(--radius-sharp);
-  background-color: var(--racing-green);
+  background-color: var(--coach-green);
   border: 2px solid var(--brass);
-  color: var(--malt-cream);
+  color: var(--tavern-cream);
   font-weight: 600;
-  font-size: 0.98rem;
+  font-size: 0.97rem;
 }
 
 .form-confirmation[hidden] {
   display: none;
 }
 
-/* Footer */
+/* ==========================================================================
+   8. Footer & Solid 100% Opaque Mobile Tavern Bottom Dock
+   ========================================================================== */
 .site-footer {
-  background-color: var(--racing-green);
-  color: var(--malt-cream);
-  border-top: 3px solid var(--brass);
+  background-color: var(--coach-green);
+  color: var(--tavern-cream);
+  border-top: 4px double var(--brass);
   padding: 3rem 0 2.25rem;
-  font-size: 0.92rem;
+  font-size: 0.91rem;
 }
 
 .site-footer a {
@@ -1047,7 +1454,7 @@ p {
   grid-template-columns: 1fr;
   gap: 2rem;
   padding-bottom: 2rem;
-  border-bottom: 1px solid var(--racing-border);
+  border-bottom: 1px solid var(--coach-border);
 }
 
 @media (min-width: 820px) {
@@ -1081,12 +1488,12 @@ p {
 
 .social-badge {
   display: inline-block;
-  background-color: var(--racing-panel);
-  border: 1px solid var(--racing-border);
-  color: var(--malt-cream);
+  background-color: var(--coach-panel);
+  border: 1px solid var(--coach-border);
+  color: var(--tavern-cream);
   padding: 0.3rem 0.65rem;
   border-radius: var(--radius-sharp);
-  font-size: 0.83rem;
+  font-size: 0.82rem;
   font-weight: 500;
 }
 
@@ -1094,24 +1501,24 @@ p {
   padding-top: 1.5rem;
   display: flex;
   flex-direction: column;
-  gap: 0.55rem;
-  font-size: 0.84rem;
-  color: #D9D2C3;
+  gap: 0.52rem;
+  font-size: 0.83rem;
+  color: #DDD4C0;
 }
 
 .footer-disclaimers p {
   margin: 0;
 }
 
-/* Solid Opaque Sticky Mobile Action Bar */
+/* Solid 100% Opaque Sticky Mobile Action Bar */
 .mobile-action-bar {
   position: fixed;
   bottom: 0;
   left: 0;
   right: 0;
   z-index: 1100;
-  background-color: #17231E; /* 100% Solid Opaque Deep Racing-Slate Green */
-  border-top: 2px solid #D8A24A;
+  background-color: #101B17;
+  border-top: 2px solid #D4A656;
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   padding: 0.45rem 0.5rem;
@@ -1123,35 +1530,37 @@ p {
   align-items: center;
   justify-content: center;
   min-height: 44px;
-  padding: 0.35rem 0.4rem;
+  padding: 0.35rem 0.35rem;
   border-radius: var(--radius-sharp);
   text-decoration: none;
-  font-size: 0.81rem;
-  font-weight: 600;
+  font-size: 0.79rem;
+  font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.05em;
   text-align: center;
   line-height: 1.2;
-  background-color: #24362E;
-  color: var(--malt-cream);
+  background-color: #1D3028;
+  color: var(--tavern-cream);
+  border: 1px solid rgba(212, 166, 86, 0.35);
 }
 
 .mobile-bar-btn:hover {
-  background-color: #2E453B;
+  background-color: #273E34;
   color: var(--brass);
 }
 
 .mobile-bar-btn.bar-cta {
-  background-color: #AD5122;
+  background-color: #A6461E;
+  border-color: #D4A656;
   color: #FFFFFF;
 }
 
 .mobile-bar-btn.bar-cta:hover {
-  background-color: #8E4018;
+  background-color: #883614;
   color: #FFFFFF;
 }
 
-@media (min-width: 900px) {
+@media (min-width: 960px) {
   .mobile-action-bar {
     display: none;
   }

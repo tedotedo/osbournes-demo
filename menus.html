@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="robots" content="noindex, nofollow">
-  <title>Menus — Breakfast &amp; Brunch, Pub Classics &amp; Drinks | Osbournes Yarm</title>
-  <meta name="description" content="Mobile-friendly tabbed menu layout for Osbournes at 24 High Street, Yarm TS15 9AE — Breakfast & Brunch, Pub Classics & Sharing, and Drinks & Draught.">
+  <title>Menus — Breakfast &amp; Brunch, Pub Classics &amp; Draught | Osbournes Yarm</title>
+  <meta name="description" content="Mobile-friendly Victorian broadsheet menu layout for Osbournes at 24 High Street, Yarm TS15 9AE — Breakfast & Brunch, Pub Classics & Sharing, and Drinks & Draught.">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="css/styles.css">
 </head>
@@ -16,13 +16,15 @@
     <p>Concept design by Mark Aszkenasy – not the official website of Osbournes.</p>
   </div>
 
+  <!-- Symmetrical Gilded Pub Signboard Fascia -->
   <header class="site-header">
-    <div class="container header-inner">
-      <a class="brand-link" href="index.html">
-        <img class="brand-crest" src="images/logo-mark.svg" alt="" width="45" height="45">
-        <span class="brand-title-wrap">
-          <span class="brand-name">Osbournes</span>
-          <span class="brand-location">24 High Street · Yarm</span>
+    <div class="fascia-inner">
+      <a class="fascia-crest" href="index.html">
+        <img class="fascia-crest-emblem" src="images/logo-mark.svg" alt="" width="44" height="44">
+        <span class="fascia-crest-text">
+          <span class="crest-no">✦ No. 24 ✦</span>
+          <span class="crest-name">Osbournes</span>
+          <span class="crest-street">Yarm High Street</span>
         </span>
       </a>
 
@@ -34,9 +36,11 @@
       </button>
 
       <nav id="primary-nav" class="primary-nav" aria-label="Primary navigation">
-        <ul class="nav-list">
-          <li><a class="nav-link" href="index.html">Home</a></li>
-          <li><a class="nav-link" href="menus.html" aria-current="page">Menus</a></li>
+        <ul class="nav-wing nav-wing-left">
+          <li><a class="nav-link" href="index.html">Public House</a></li>
+          <li><a class="nav-link" href="menus.html" aria-current="page">Inspect Menus</a></li>
+        </ul>
+        <ul class="nav-wing nav-wing-right">
           <li><a class="nav-link" href="whats-on-bookings.html">What's On &amp; Bookings</a></li>
           <li class="nav-cta-li"><a class="btn btn-copper btn-sm" href="whats-on-bookings.html#booking-enquiry">Book a Table</a></li>
         </ul>
@@ -45,24 +49,29 @@
   </header>
 
   <main id="main-content">
-    <!-- Page Banner -->
-    <section class="page-banner dark-panel">
+    <!-- Centered Gilded Broadsheet Page Banner -->
+    <section class="broadsheet-page-banner dark-panel">
       <div class="container">
-        <span class="kicker">24 High Street · Yarm TS15 9AE</span>
-        <h1>Kitchen &amp; Bar <em>Menus</em></h1>
+        <span class="brass-ribbon-plaque">No. 24 Yarm High Street · Bill of Fare</span>
+        <h1>Kitchen &amp; Cellar <em>Broadsheet Menus</em></h1>
+        <svg class="mirror-divider-svg" viewBox="0 0 160 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+          <line x1="4" y1="8" x2="64" y2="8"/>
+          <polygon points="80,2 86,8 80,14 74,8" fill="currentColor"/>
+          <line x1="96" y1="8" x2="156" y2="8"/>
+        </svg>
         <p class="lead">
-          Designed for instant mobile reading without pinch-zooming PDFs. Structured rows below are ready for Osbournes' exact current dishes, draught pours, and prices.
+          Crafted for effortless mobile reading with zero PDF pinch-zooming. Each ledger board below is structured for Osbournes' exact current dishes, draught lines, and prices.
         </p>
-        <p style="margin-bottom:0; font-size:0.9rem; color:#D9D2C3;">
-          Kitchen &amp; bar service hours: <span class="ph">[Opening &amp; kitchen hours – owner to confirm]</span>
+        <p style="margin-bottom:0; font-size:0.9rem; color:#E5DEC9;">
+          Kitchen &amp; bar serving hours: <span class="ph">[Opening &amp; kitchen hours – owner to confirm]</span>
         </p>
       </div>
     </section>
 
-    <!-- Accessible Tabbed Menu Board -->
+    <!-- Accessible WAI-ARIA Tabbed Broadsheet Menu Board -->
     <section class="section" aria-labelledby="menu-board-heading">
       <div class="container">
-        <h2 id="menu-board-heading" class="kicker" style="font-family:var(--font-sans); margin-bottom:1.1rem;">Select Menu Board</h2>
+        <h2 id="menu-board-heading" class="kicker" style="font-family:var(--font-sans); margin-bottom:1.1rem;">Select House Menu Board</h2>
 
         <div class="menu-tablist" role="tablist" aria-label="Osbournes Menus">
           <button
@@ -107,7 +116,12 @@
           role="tabpanel"
           aria-labelledby="tab-brunch"
         >
-          <span class="kicker">Morning Service</span>
+          <span class="brass-screw tl" aria-hidden="true"></span>
+          <span class="brass-screw tr" aria-hidden="true"></span>
+          <span class="brass-screw bl" aria-hidden="true"></span>
+          <span class="brass-screw br" aria-hidden="true"></span>
+
+          <span class="kicker">Morning Doors on the Cobbles</span>
           <h3>Breakfast &amp; Brunch</h3>
           <p style="color:var(--ink-muted);">
             Serving hours: <span class="ph">[Opening &amp; kitchen hours – owner to confirm]</span>
@@ -203,6 +217,11 @@
           aria-labelledby="tab-classics"
           hidden
         >
+          <span class="brass-screw tl" aria-hidden="true"></span>
+          <span class="brass-screw tr" aria-hidden="true"></span>
+          <span class="brass-screw bl" aria-hidden="true"></span>
+          <span class="brass-screw br" aria-hidden="true"></span>
+
           <span class="kicker">Daytime &amp; Evening Kitchen</span>
           <h3>Pub Classics &amp; Sharing</h3>
           <p style="color:var(--ink-muted);">
@@ -299,7 +318,12 @@
           aria-labelledby="tab-drinks"
           hidden
         >
-          <span class="kicker">From the Bar</span>
+          <span class="brass-screw tl" aria-hidden="true"></span>
+          <span class="brass-screw tr" aria-hidden="true"></span>
+          <span class="brass-screw bl" aria-hidden="true"></span>
+          <span class="brass-screw br" aria-hidden="true"></span>
+
+          <span class="kicker">From the Cellar &amp; Bar</span>
           <h3>Drinks &amp; Draught</h3>
           <p style="color:var(--ink-muted);">
             Bar hours: <span class="ph">[Opening &amp; kitchen hours – owner to confirm]</span>
@@ -381,15 +405,15 @@
 
     <!-- Booking Prompt -->
     <section class="section section-parchment" aria-labelledby="menu-cta-heading">
-      <div class="container">
-        <div class="section-intro" style="margin-bottom:1.25rem;">
-          <span class="kicker">Tables &amp; Group Areas</span>
-          <h2 id="menu-cta-heading">Planning morning brunch or an evening group table?</h2>
-          <p class="lead">
-            Send a table or group area enquiry online for 24 High Street, Yarm.
-          </p>
+      <div class="container" style="text-align:center;">
+        <span class="kicker">Tables, Snugs &amp; Party Areas</span>
+        <h2 id="menu-cta-heading">Planning morning brunch or an <em>evening group booth?</em></h2>
+        <p class="lead" style="margin-left:auto; margin-right:auto;">
+          Send a table or group area enquiry online for No. 24 High Street, Yarm.
+        </p>
+        <div class="btn-row btn-row-center">
+          <a class="btn btn-copper" href="whats-on-bookings.html#booking-enquiry">Enquire for a Table or Party Snug</a>
         </div>
-        <a class="btn btn-copper" href="whats-on-bookings.html#booking-enquiry">Enquire for a Table or Booth</a>
       </div>
     </section>
   </main>
@@ -398,9 +422,9 @@
     <div class="container">
       <div class="footer-columns">
         <div>
-          <h2 class="footer-title">Osbournes</h2>
+          <h2 class="footer-title">Osbournes · No. 24</h2>
           <p>
-            Independent Pub-Bar · Breakfast &amp; Brunch<br>
+            Independent High Street Public House · Breakfast &amp; Brunch<br>
             24 High Street, Yarm TS15 9AE
           </p>
           <p>
@@ -413,11 +437,11 @@
         </div>
 
         <div>
-          <h2 class="footer-title">Explore</h2>
+          <h2 class="footer-title">House Signposts</h2>
           <ul class="footer-nav-list">
-            <li><a href="index.html">Home &amp; High Street Info</a></li>
+            <li><a href="index.html">Public House &amp; Chalkboard Slate</a></li>
             <li><a href="menus.html">Breakfast, Pub Classics &amp; Drinks Menus</a></li>
-            <li><a href="whats-on-bookings.html">What's On &amp; Table Bookings</a></li>
+            <li><a href="whats-on-bookings.html">What's On &amp; Snug Bookings</a></li>
             <li>
               <a
                 href="https://www.google.com/maps/search/?api=1&amp;query=Osbournes+24+High+Street+Yarm+TS15+9AE"
@@ -431,10 +455,10 @@
         </div>
 
         <div>
-          <h2 class="footer-title">Hours &amp; Enquiries</h2>
+          <h2 class="footer-title">Hours &amp; Table Ledger</h2>
           <p><span class="ph">[Opening &amp; kitchen hours – owner to confirm]</span></p>
           <p style="margin-bottom:0;">
-            Use the online enquiry board for brunch tables, dining groups, and birthday booth areas.
+            Send brunch table, matchday dining, and birthday booth enquiries directly via our online booking ledger.
           </p>
         </div>
       </div>

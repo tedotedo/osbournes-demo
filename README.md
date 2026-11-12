@@ -2,22 +2,18 @@
 
 Independent static concept website prepared by **Mark Aszkenasy** for **Osbournes** (`24 High Street, Yarm TS15 9AE`).
 
-> **Disclaimer:** This is an unsolicited concept demonstration and is **not** the official website of Osbournes. All pages carry `<meta name="robots" content="noindex, nofollow">` and a persistent top notice banner. Because public directories currently publish conflicting telephone numbers (`01642 781012` vs `01642 801012`), telephone fields deliberately display `[Phone to confirm]` with no guessed `tel:` link.
+> **Disclaimer:** This is an unsolicited concept demonstration and is **not** the official website of Osbournes. All pages carry `<meta name="robots" content="noindex, nofollow">` and a persistent top notice banner. Because public directories currently publish conflicting telephone numbers (`01642 781012` vs `01642 801012`), telephone fields deliberately display `[Phone to confirm]` with **zero** `tel:` links anywhere in the site.
 
-## Included Files
+## Design Direction — *"Victorian Gilded Public House Mirror, Tavern Fascia & Chalkboard Broadsheet"*
 
-- `index.html` — High Street daytime brunch-to-evening pub hero (`images/hero.jpg`), morning breakfast & brunch showcase (`images/feature.jpg`), three hospitality pillars, What's On teaser, opening hours & `[Phone to confirm]` ledger, and Google Maps link (`24 High Street, Yarm TS15 9AE`).
-- `menus.html` — Accessible WAI-ARIA tabbed menu board (`Breakfast & Brunch`, `Pub Classics & Sharing`, `Drinks & Draught`) with keyboard arrow navigation and clean `[Menu item – owner to supply]` / `[£—]` rows.
-- `whats-on-bookings.html` — Live Music & Sport schedule layout plus accessible **Table & Party / Booth Booking Enquiry Form** (`Brunch Table`, `Dining Table`, `Birthday or Group Area`).
-- `css/styles.css` — Mobile-first responsive stylesheet (`360px–1440px`) using self-hosted `Playfair Display` & `Work Sans` variable fonts, WCAG AA high-contrast palette (`#17231E`, `#F7F2E7`, `#AD5122`, `#D8A24A`), and solid opaque mobile action bar.
-- `js/main.js` — Zero-dependency client-side script handling `Escape`-accessible mobile navigation, WAI-ARIA menu tabs, quick booking pre-selection, and accessible dummy form validation.
-- `favicon.svg` & `images/logo-mark.svg` — Custom geometric signboard crest & monogram SVG emblems.
-- `fonts/` — Self-hosted `playfair-latin.woff2`, `playfair-latin-italic.woff2`, and `work-sans-latin.woff2` (zero external font calls).
-- `PITCH.md` — High Street walk-in pitch script, public directory & `osbournesyarm.co.uk` domain audit, 3-tap mobile demo flow, objection handlers, and `[...]` launch checklist.
+- **Symmetrical Gilded Pub Signboard Fascia** — Double-lined brass border across top and bottom with navigation split symmetrically left and right of a central ornate `No. 24 · OSBOURNES · YARM HIGH STREET` Tavern Crest (collapsing cleanly to crest + brass `MENU` button on mobile).
+- **Ornate Gilded Pub-Mirror Stage + Three Brass-Pinned Tavern Plaques (`index.html`)** — Custom inline SVG Victorian brass filigree corner flourishes framing `images/hero.jpg` behind a calibrated dark coach-green vignette (`10:1+` WCAG AAA contrast), docked at the base with three brass-riveted tavern plaques (`MORNING DOORS`, `ALL DAY & MATCHDAYS`, `FRIDAY & SATURDAY`).
+- **"The High Street Chalkboard Slate" (`index.html`)** — Framed dark slate pub chalkboard with hand-ruled chalk dividers, interactive vibe filters (`All House Sessions`, `Morning Brunch`, `Live Sport`, `Weekend Nights`, `Private Party Areas`), and honest `[Schedule – owner to confirm]` placeholders.
+- **Kitchen & Cellar Broadsheet Menus (`menus.html`)** — Accessible WAI-ARIA tabbed Bill of Fare (`Breakfast & Brunch`, `Pub Classics & Sharing`, `Drinks & Draught`) with brass corner rivets and `[Menu item – owner to supply]` / `[£—]` ledger rows.
+- **What's On & Party Snug Bookings (`whats-on-bookings.html`)** — Brass-pinned live sport & weekend music plaques paired with an accessible **Table, Brunch & Party Snug Enquiry Form**.
+- **Self-Hosted Typography & WCAG AA+ Palette** — Self-hosted `Playfair Display` & `Work Sans` WOFF2 fonts (`fonts/`), Deep Coach Green `#101B17`, Aged Gilded Brass `#D4A656`, Warm Tavern Cream `#F4ECD8`, Copper Ale `#B85328` / `#A6461E`, zero external network calls, and a 100% opaque sticky mobile bottom dock.
 
 ## Preview Locally
-
-Open `index.html` directly in any modern browser or serve locally:
 
 ```bash
 python3 -m http.server 8081

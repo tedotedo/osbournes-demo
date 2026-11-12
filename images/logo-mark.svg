@@ -1,10 +1,10 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 76 76" role="img" aria-label="Osbournes 24 High Street Yarm pub crest">
-  <polygon points="16,3 60,3 73,16 73,60 60,73 16,73 3,60 3,16" fill="#17231E"/>
-  <polygon points="18.5,7.5 57.5,7.5 68.5,18.5 68.5,57.5 57.5,68.5 18.5,68.5 7.5,57.5 7.5,18.5" fill="none" stroke="#D8A24A" stroke-width="2"/>
-  <polygon points="21,11.5 55,11.5 64.5,21 64.5,55 55,64.5 21,64.5 11.5,55 11.5,21" fill="none" stroke="#6E572C" stroke-width="1"/>
-  <ellipse cx="38" cy="35" rx="13.5" ry="16" fill="none" stroke="#F7F2E7" stroke-width="3.6"/>
-  <ellipse cx="38" cy="35" rx="8" ry="11" fill="none" stroke="#D8A24A" stroke-width="1.5"/>
-  <circle cx="20" cy="35" r="2.1" fill="#D8A24A"/>
-  <circle cx="56" cy="35" r="2.1" fill="#D8A24A"/>
-  <line x1="23" y1="57.5" x2="53" y2="57.5" stroke="#D8A24A" stroke-width="1.8" stroke-linecap="round"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" role="img" aria-label="Osbournes No. 24 Yarm High Street Tavern Crest">
+  <polygon points="16,3 64,3 77,16 77,64 64,77 16,77 3,64 3,16" fill="#101B17"/>
+  <polygon points="18,7 62,7 73,18 73,62 62,73 18,73 7,62 7,18" fill="none" stroke="#D4A656" stroke-width="2"/>
+  <polygon points="20.5,11 59.5,11 69,20.5 69,59.5 59.5,69 20.5,69 11,59.5 11,20.5" fill="none" stroke="#8C6A30" stroke-width="1"/>
+  <ellipse cx="40" cy="36" rx="14" ry="16.5" fill="none" stroke="#F4ECD8" stroke-width="3.4"/>
+  <ellipse cx="40" cy="36" rx="8.5" ry="11.5" fill="none" stroke="#D4A656" stroke-width="1.4"/>
+  <circle cx="19" cy="36" r="2.2" fill="#D4A656"/>
+  <circle cx="61" cy="36" r="2.2" fill="#D4A656"/>
+  <line x1="23" y1="60" x2="57" y2="60" stroke="#D4A656" stroke-width="1.8" stroke-linecap="round"/>
 </svg>
