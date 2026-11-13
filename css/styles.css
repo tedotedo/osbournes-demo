@@ -549,6 +549,11 @@ p {
     padding: 0.48rem 0.75rem;
     font-size: 0.8rem;
     letter-spacing: 0.1em;
+    white-space: nowrap;
+  }
+
+  .nav-cta-li .btn {
+    white-space: nowrap;
   }
 
   .nav-link[aria-current="page"] {
@@ -559,6 +564,31 @@ p {
   .nav-cta-li {
     margin-top: 0;
     margin-left: 0.35rem;
+  }
+}
+
+@media (min-width: 960px) and (max-width: 1180px) {
+  .fascia-inner {
+    gap: 0.75rem;
+  }
+  .fascia-crest {
+    padding: 0.2rem 0.85rem;
+  }
+  .crest-name {
+    font-size: 1.35rem;
+  }
+  .nav-wing {
+    gap: 0.3rem;
+  }
+  .nav-link {
+    padding: 0.44rem 0.55rem;
+    font-size: 0.74rem;
+    letter-spacing: 0.06em;
+  }
+  .nav-cta-li .btn {
+    padding: 0.5rem 0.85rem;
+    font-size: 0.75rem;
+    min-height: 40px;
   }
 }
 
