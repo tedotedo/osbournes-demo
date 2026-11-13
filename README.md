@@ -18,3 +18,9 @@ Independent static concept website prepared by **Mark Aszkenasy** for **Osbourne
 ```bash
 python3 -m http.server 8081
 ```
+
+## Set D — Today at Osbournes
+
+- `d/index.html`, `d/css/styles.css`, `d/js/app.js` — A gig-poster day sheet: pick any of the next seven days and see brunch, sport and music for that day, with the tap board and booking underneath.
+- Live at https://tedotedo.github.io/osbournes-demo/d/. Reuses the root `fonts/` and `images/`; same `noindex`, zero external requests and `.ph` placeholder rules as Sets A–C.
+- Which days show sport and music is an assumed weekly pattern. No fixtures, acts, hours or beers are real; all are placeholders. No phone number is shown.

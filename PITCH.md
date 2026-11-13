@@ -67,3 +67,23 @@ Before registering `osbournesyarm.co.uk` and publishing live, confirm and replac
 - [ ] `[Weekly schedule – owner to confirm]` & `[Fixture / acoustic night details – owner to confirm]` — Confirm regular live sport broadcaster details and weekend live music / acoustic schedule (`index.html`, `whats-on-bookings.html`).
 - [ ] `[Large party / booth terms – owner to confirm]` — Confirm maximum group size, booth hold policy, or deposit rules if any (`whats-on-bookings.html`).
 - [ ] Replace `images/hero.jpg` and `images/feature.jpg` with real photography of 24 High Street's bar interior and morning breakfast plates, and remove the concept banner / `noindex` meta tag upon client sign-off.
+
+---
+
+## Set D — Today at Osbournes (`/d/`)
+
+- **Live Concept URL:** https://tedotedo.github.io/osbournes-demo/d/
+- **What it is:** A gig-poster day sheet: pick any of the next seven days and see brunch, sport and music for that day, with the tap board and booking underneath.
+- **Reach it from any page:** tap **D** in the Concept switcher in the top banner.
+
+### 3-Tap Phone Demo (Set D)
+1. Tap **Sat** (or the next Friday or Saturday) in the day strip: **Live music** appears as the headline act.
+2. Tap **Book for this** under it: the booking form jumps to that day with the right booking type selected.
+3. Add a name and submit: the yellow **Admit** stub stamps in.
+
+### One-Line Pitch
+> *"One page that answers the only question people ask: what's on at Osbournes today?"*
+
+### Know Before You Show
+- Which days show sport and music is an assumed weekly pattern. No fixtures, acts, hours or beers are real; all are placeholders. No phone number is shown.
+- Demo only: no form sends anything, and unknown details stay as bracketed `[...]` placeholders for the owner to confirm.
