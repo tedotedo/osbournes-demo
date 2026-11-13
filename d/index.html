@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#17120E">
+  <title>Osbournes | Concept D — Today at Osbournes (24 High Street, Yarm)</title>
+  <meta name="description" content="Concept D for Osbournes at 24 High Street, Yarm: one day sheet showing brunch, sport and music for any day this week, with the tap board and table booking.">
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <!-- Persistent Top Concept Banner + [A] [B] [C] [D] Switcher -->
+  <div class="concept-banner" role="region" aria-label="Concept website notice">
+    <div class="concept-banner__inner">
+      <p>Concept design by Mark Aszkenasy – not the official website of Osbournes.</p>
+      <nav class="concept-switcher" aria-label="Switch concept version">
+        <span class="concept-switcher__label">Concept:</span>
+        <a class="concept-switcher__pill" href="../index.html"><span>A</span></a>
+        <a class="concept-switcher__pill" href="../b/index.html"><span>B</span></a>
+        <a class="concept-switcher__pill" href="../c/index.html"><span>C</span></a>
+        <a class="concept-switcher__pill is-active" href="index.html" aria-current="page"><span>D</span></a>
+      </nav>
+    </div>
+  </div>
+
+  <header class="site-head">
+    <div class="wrap site-head__inner">
+      <a class="brand" href="#top">
+        <img src="../images/logo-mark.svg" width="36" height="36" alt="">
+        <span>
+          <span class="brand__name">Osbournes</span>
+          <span class="brand__meta">24 High Street · Yarm</span>
+        </span>
+      </a>
+      <nav class="site-nav" aria-label="Sections"><a href="#today">Today</a><a href="#taps">On tap</a><a href="#book">Book</a><a href="#find">Find us</a></nav>
+      <a class="btn btn--hi site-head__cta" href="#book">Book a table</a>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <!-- Poster hero + day sheet -->
+    <section class="poster" id="top" aria-labelledby="poster-title">
+      <div class="wrap">
+        <p class="poster__top"><span>24 High Street</span><span>Yarm</span><span>TS15 9AE</span></p>
+        <h1 class="poster__title" id="poster-title"><span data-day-word>Today</span> at<br><b>Osbournes</b></h1>
+        <p class="poster__date" data-day-date></p>
+
+        <div class="chips chips--scroll days" role="group" aria-label="Choose a day" data-days></div>
+      </div>
+    </section>
+
+    <section class="sheet" id="today" aria-labelledby="sheet-title">
+      <div class="wrap">
+        <h2 class="visually-hidden" id="sheet-title">The line-up</h2>
+        <ol class="lineup" data-lineup aria-live="polite"></ol>
+        <p class="sheet__note"><span class="ph">[Weekly schedule – owner to confirm]</span> <span class="ph">[Opening &amp; kitchen hours – owner to confirm]</span></p>
+      </div>
+    </section>
+
+    <!-- Tap board -->
+    <section class="sec taps" id="taps" aria-labelledby="taps-title">
+      <div class="wrap">
+        <p class="eyebrow">Pouring now</p>
+        <h2 class="section-title" id="taps-title">On tap</h2>
+        <ul class="clips">
+          <li><span class="clip clip--a">1</span><span class="ph">[Brewery, beer &amp; ABV – owner to supply]</span></li>
+          <li><span class="clip clip--b">2</span><span class="ph">[Brewery, beer &amp; ABV – owner to supply]</span></li>
+          <li><span class="clip clip--c">3</span><span class="ph">[Brewery, beer &amp; ABV – owner to supply]</span></li>
+          <li><span class="clip clip--a">4</span><span class="ph">[Brewery, beer &amp; ABV – owner to supply]</span></li>
+          <li><span class="clip clip--b">5</span><span class="ph">[Guest ale – owner to supply]</span></li>
+          <li><span class="clip clip--c">6</span><span class="ph">[Guest ale – owner to supply]</span></li>
+        </ul>
+        <figure class="taps__photo">
+          <img src="../images/hero.jpg" width="1200" height="896" alt="Illustrative image of a pub bar with hand pulls" loading="lazy">
+          <figcaption class="illus">Illustrative image – not Osbournes' own photography.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- Book -->
+    <section class="sec book" id="book" aria-labelledby="book-title">
+      <div class="wrap book__grid">
+        <div>
+          <p class="eyebrow">No booking fees</p>
+          <h2 class="section-title" id="book-title">Get your name on the list</h2>
+          <form class="form" data-book novalidate>
+            <fieldset>
+              <legend>What for?</legend>
+              <div class="seg">
+                <label><input type="radio" name="type" value="Brunch table" checked><span>Brunch table</span></label>
+                <label><input type="radio" name="type" value="Dining table"><span>Dining table</span></label>
+                <label><input type="radio" name="type" value="Birthday or group area"><span>Birthday / group</span></label>
+              </div>
+            </fieldset>
+            <div class="form__row form__row--half">
+              <div><label for="b-day">Day</label><select id="b-day" name="day" data-book-day></select></div>
+              <div><label for="b-guests">Guests</label><select id="b-guests" name="guests"><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>8</option><option>10+</option></select></div>
+            </div>
+            <div class="form__row form__row--half">
+              <div><label for="b-name">Name</label><input id="b-name" name="name" type="text" autocomplete="name" required></div>
+              <div><label for="b-phone">Phone</label><input id="b-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" required></div>
+            </div>
+            <p class="form__error" data-book-error role="alert" hidden>Add your name and a phone number.</p>
+            <button class="btn btn--hi btn--block" type="submit">Request booking</button>
+            <p class="form__fine">Demo only. <span class="ph">[Large party / booth terms – owner to confirm]</span></p>
+          </form>
+        </div>
+        <div class="stub" data-stub aria-live="polite">
+          <p class="stub__admit">Admit</p>
+          <p class="stub__who" data-stub-who>Your name here</p>
+          <p class="stub__what" data-stub-what>Pick a day and what it's for.</p>
+          <p class="stub__foot">Osbournes · 24 High Street · Yarm</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="sec find" id="find" aria-labelledby="find-title">
+      <div class="wrap">
+        <h2 class="section-title" id="find-title">On Yarm High Street.</h2>
+        <address>24 High Street, Yarm TS15 9AE</address>
+        <p><span class="ph">[Phone to confirm]</span> <span class="ph">[Email – owner to confirm]</span></p>
+        <p class="find__social">Facebook <b>OsbournesYarm</b> · Instagram <b>@osbournes.yarm</b></p>
+        <p><span class="ph">[Allergen statement – owner to confirm]</span></p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <div class="wrap">
+      <p class="foot__links">
+        <a href="../index.html">Concept A</a>
+        <a href="../b/index.html">Concept B</a>
+        <a href="../c/index.html">Concept C</a>
+        <a href="index.html" aria-current="page">Concept D</a>
+      </p>
+      <p><strong>Concept disclaimer:</strong> Concept design by Mark Aszkenasy – not the official website of Osbournes. All bracketed items are placeholders awaiting owner confirmation. The weekly line-up is an illustrative structure; fixtures, acts and hours are unconfirmed. No forms transmit data and no cookies are set.</p>
+      <p><strong>Illustrative image credit:</strong> Photographs shown on this concept page are AI-generated illustrative images used solely to demonstrate visual layout and do not depict the actual business, its work, products or premises.</p>
+    </div>
+  </footer>
+
+  <nav class="dock" aria-label="Quick actions"><a href="#today">Today</a><a href="#taps">On tap</a><a class="dock__primary" href="#book">Book</a></nav>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
