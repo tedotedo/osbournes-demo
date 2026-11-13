@@ -159,17 +159,84 @@ a:hover {
   color: var(--tavern-cream);
   font-size: 0.82rem;
   line-height: 1.45;
-  padding: 0.48rem 1rem;
-  text-align: center;
+  padding: 0.45rem 0.85rem;
   border-bottom: 1px solid var(--coach-border);
   overflow-wrap: anywhere;
 }
 
-.concept-banner p {
-  margin: 0 auto;
+.concept-banner-inner {
   max-width: var(--container-max);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  text-align: center;
+}
+
+@media (min-width: 920px) {
+  .concept-banner-inner {
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+    gap: 1rem;
+  }
+}
+
+.concept-banner p {
+  margin: 0;
   font-weight: 500;
   letter-spacing: 0.015em;
+}
+
+.concept-switcher {
+  display: inline-flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.35rem;
+  flex-shrink: 0;
+}
+
+.concept-switcher-label {
+  font-size: 0.74rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--brass-bright);
+  margin-right: 0.12rem;
+}
+
+.concept-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 42px;
+  min-height: 42px;
+  padding: 0 0.65rem;
+  border-radius: 999px;
+  border: 1px solid rgba(212, 166, 86, 0.55);
+  background-color: rgba(255, 255, 255, 0.06);
+  color: var(--tavern-cream);
+  font-family: var(--font-sans);
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-decoration: none;
+  line-height: 1;
+}
+
+.concept-pill:hover {
+  background-color: rgba(212, 166, 86, 0.22);
+  color: #FFFFFF;
+}
+
+.concept-pill.is-active,
+.concept-pill[aria-current="page"],
+.concept-pill[aria-current="true"] {
+  background-color: var(--brass);
+  color: #0B1310;
+  border-color: var(--brass);
 }
 
 /* Containers & Sections */
