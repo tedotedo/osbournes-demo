@@ -89,6 +89,18 @@
               <path d="M4 26c9 0 16-7 16-16M26 4c0 9-7 16-16 16"/>
             </svg>
 
+            <span class="pub-ill-badge">Illustrative image</span>
+            <button
+              type="button"
+              class="mirror-zoom-trigger"
+              data-lightbox-trigger
+              data-lightbox-src="images/hero.jpg"
+              data-lightbox-alt="Warm dark-oak panelled public house interior with brass bar rails, leather booths and firelight glow"
+              data-lightbox-caption="Illustrative image — warm oak, brass bar rail &amp; booth interior concept for Osbournes at 24 High Street, Yarm."
+            >
+              Enlarge Photo ⤢
+            </button>
+
             <figure class="mirror-bg-figure">
               <img
                 src="images/hero.jpg"
@@ -178,6 +190,15 @@
               </p>
             </div>
 
+            <div class="occasion-presets-wrap" role="region" aria-label="1-tap occasion presets">
+              <span class="occasion-presets-label">✦ 1-Tap Occasion Presets (Filter Slate &amp; Pre-Fill Booking)</span>
+              <div class="occasion-preset-row">
+                <button type="button" class="occasion-preset-chip" data-occasion-preset="brunch" aria-pressed="false">🍳 Weekend Cobbles Brunch Table</button>
+                <button type="button" class="occasion-preset-chip" data-occasion-preset="sport" aria-pressed="false">🍺 Live Sport &amp; Afternoon Booth</button>
+                <button type="button" class="occasion-preset-chip" data-occasion-preset="snug" aria-pressed="false">🥂 Friday/Saturday Party Snug</button>
+              </div>
+            </div>
+
             <div class="chalk-filter-bar" role="region" aria-label="Filter the pub chalkboard">
               <button type="button" class="chalk-filter-btn" data-chalk-filter="all" aria-pressed="true">All House Sessions</button>
               <button type="button" class="chalk-filter-btn" data-chalk-filter="brunch" aria-pressed="false">Morning Brunch</button>
@@ -244,28 +265,80 @@
       </div>
     </section>
 
-    <!-- Public House Menu & Snug Broadsheet Ledger -->
+    <!-- Public House Editorial Lookbook & Snug Broadsheet Ledger -->
     <section id="find-us" class="section" aria-labelledby="ledger-heading">
       <div class="container">
-        <div class="broadsheet-ledger-grid">
-          <div>
-            <figure class="pub-figure">
+        <div style="text-align:center; max-width:44rem; margin:0 auto 1.85rem;">
+          <span class="kicker">Inside No. 24 · Editorial Lookbook</span>
+          <h2>Morning Cobbles Brunch, <em>Cellar Brass &amp; Snugs</em></h2>
+          <p class="lead" style="margin:0 auto;">
+            Tap any plate below to inspect in full resolution or jump straight to our reservation ledger.
+          </p>
+        </div>
+
+        <div class="lookbook-grid-3" aria-label="Osbournes lookbook gallery">
+          <figure class="pub-figure" data-lightbox-figure tabindex="0" role="button" aria-label="Enlarge illustrative morning brunch photograph">
+            <div class="pub-figure-media-wrap">
+              <span class="pub-ill-badge">Illustrative image</span>
+              <span class="pub-zoom-pill" aria-hidden="true">Enlarge ⤢</span>
               <img
                 src="images/feature.jpg"
                 alt="Hearty cooked pub breakfast and morning brunch spread with eggs, toast and fresh coffee on a solid oak table"
                 width="1200"
                 height="896"
+                loading="lazy"
               >
-              <figcaption>
-                Illustrative image — morning pub breakfast and brunch spread concept for No. 24 High Street.
-              </figcaption>
-            </figure>
+            </div>
+            <figcaption>
+              Illustrative image — morning pub breakfast and cobbles brunch spread concept for No. 24 High Street.
+            </figcaption>
+          </figure>
 
-            <article class="broadsheet-card broadsheet-card-copper" style="margin-top:1.5rem;">
+          <figure class="pub-figure" data-lightbox-figure tabindex="0" role="button" aria-label="Enlarge illustrative cellar cask handpulls photograph">
+            <div class="pub-figure-media-wrap">
+              <span class="pub-ill-badge">Illustrative image</span>
+              <span class="pub-zoom-pill" aria-hidden="true">Enlarge ⤢</span>
+              <img
+                src="images/detail-1.jpg"
+                alt="Gleaming brass cask handpulls and amber pint on a polished mahogany bar in Georgian window light"
+                width="1200"
+                height="896"
+                loading="lazy"
+              >
+            </div>
+            <figcaption>
+              Illustrative image — gleaming brass cask handpulls &amp; amber cellar pour in High Street window light.
+            </figcaption>
+          </figure>
+
+          <figure class="pub-figure" data-lightbox-figure tabindex="0" role="button" aria-label="Enlarge illustrative bottle-green party snug booth photograph">
+            <div class="pub-figure-media-wrap">
+              <span class="pub-ill-badge">Illustrative image</span>
+              <span class="pub-zoom-pill" aria-hidden="true">Enlarge ⤢</span>
+              <img
+                src="images/detail-2.jpg"
+                alt="Candlelit bottle-green buttoned leather party snug booth with brass lamp glow"
+                width="1200"
+                height="896"
+                loading="lazy"
+              >
+            </div>
+            <figcaption>
+              Illustrative image — candlelit bottle-green buttoned leather party snug booth for weekend celebrations.
+            </figcaption>
+          </figure>
+        </div>
+
+        <div class="broadsheet-ledger-grid">
+          <div>
+            <article class="broadsheet-card broadsheet-card-copper">
               <span class="kicker">From Kitchen to Cellar</span>
               <h3>Inspect the Full House Menus</h3>
               <p>
                 Read our mobile-ready Bill of Fare — split cleanly across <strong>Breakfast &amp; Brunch</strong>, <strong>Pub Classics &amp; Sharing</strong>, and <strong>Drinks &amp; Draught</strong> with zero awkward PDF zooming.
+              </p>
+              <p style="margin-bottom:0.5rem;">
+                Whether stopping off Yarm's cobbles for morning coffee and cooked breakfast plates, gathering for televised live sport, or holding a Friday/Saturday party snug, every board is built for instant phone browsing.
               </p>
               <div class="btn-row" style="margin-top:0.75rem;">
                 <a class="btn btn-racing btn-sm" href="menus.html#panel-brunch">Breakfast &amp; Brunch</a>
@@ -371,18 +444,36 @@
 
       <div class="footer-disclaimers">
         <p><strong>Concept Website Disclaimer:</strong> This is an independent concept demonstration created by Mark Aszkenasy and is not the official website of Osbournes.</p>
-        <p><strong>Illustrative Imagery Credit:</strong> Pub interior and food photographs shown in this demonstration are AI-generated illustrative images created for layout preview purposes.</p>
+        <p><strong>Illustrative Imagery Credit:</strong> Pub interior, cellar handpull, party snug, and food photographs shown in this demonstration are AI-generated illustrative images created for layout preview purposes.</p>
         <p>Design by Mark Aszkenasy</p>
       </div>
     </div>
   </footer>
 
-  <!-- Solid Opaque Sticky Mobile Action Bar -->
+  <!-- Solid Frosted Sticky Mobile Action Bar -->
   <nav class="mobile-action-bar" aria-label="Quick venue actions">
     <a class="mobile-bar-btn" href="menus.html">Menus</a>
     <a class="mobile-bar-btn" href="#find-us">Find Us</a>
     <a class="mobile-bar-btn bar-cta" href="whats-on-bookings.html#booking-enquiry">Book Table</a>
   </nav>
+
+  <div id="micro-toast" class="micro-toast" role="status" aria-live="polite"></div>
+
+  <dialog id="photo-lightbox" class="photo-lightbox" aria-label="Illustrative photograph preview">
+    <div class="lightbox-shell">
+      <div class="lightbox-topbar">
+        <span class="lightbox-ill-tag">Illustrative image</span>
+        <button type="button" class="lightbox-close" data-lightbox-close aria-label="Close photo preview">✕</button>
+      </div>
+      <div class="lightbox-stage">
+        <img id="lightbox-img" src="images/hero.jpg" alt="" width="1200" height="896">
+      </div>
+      <div class="lightbox-foot">
+        <p id="lightbox-caption" class="lightbox-caption"></p>
+        <a class="btn btn-copper btn-sm" id="lightbox-cta" href="whats-on-bookings.html#booking-enquiry">Book Table or Snug →</a>
+      </div>
+    </div>
+  </dialog>
 
   <script src="js/main.js"></script>
 </body>

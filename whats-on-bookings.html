@@ -85,8 +85,17 @@
           </p>
         </div>
 
+        <div class="occasion-presets-wrap" style="max-width:52rem; margin:0 auto 2rem;" role="region" aria-label="1-tap occasion presets">
+          <span class="occasion-presets-label">✦ 1-Tap Occasion Presets (Highlight Slate &amp; Pre-Fill Enquiry Form)</span>
+          <div class="occasion-preset-row">
+            <button type="button" class="occasion-preset-chip" data-occasion-preset="brunch" aria-pressed="false">🍳 Weekend Cobbles Brunch Table</button>
+            <button type="button" class="occasion-preset-chip" data-occasion-preset="sport" aria-pressed="false">🍺 Live Sport &amp; Afternoon Booth</button>
+            <button type="button" class="occasion-preset-chip" data-occasion-preset="snug" aria-pressed="false">🥂 Friday/Saturday Party Snug</button>
+          </div>
+        </div>
+
         <div class="bill-grid bill-grid-3">
-          <article class="brass-panel">
+          <article class="brass-panel" data-schedule-key="sport">
             <span class="brass-screw tl" aria-hidden="true"></span>
             <span class="brass-screw tr" aria-hidden="true"></span>
             <span class="brass-screw bl" aria-hidden="true"></span>
@@ -109,7 +118,7 @@
             </div>
           </article>
 
-          <article class="brass-panel">
+          <article class="brass-panel" data-schedule-key="snug">
             <span class="brass-screw tl" aria-hidden="true"></span>
             <span class="brass-screw tr" aria-hidden="true"></span>
             <span class="brass-screw bl" aria-hidden="true"></span>
@@ -132,7 +141,7 @@
             </div>
           </article>
 
-          <article class="brass-panel">
+          <article class="brass-panel" data-schedule-key="brunch">
             <span class="brass-screw tl" aria-hidden="true"></span>
             <span class="brass-screw tr" aria-hidden="true"></span>
             <span class="brass-screw bl" aria-hidden="true"></span>
@@ -161,6 +170,41 @@
     <!-- Table & Party / Booth Booking Enquiry Form -->
     <section id="booking-enquiry" class="section section-parchment" aria-labelledby="enquiry-heading">
       <div class="container">
+        <div class="lookbook-grid-2" aria-label="Cellar and party snug spaces">
+          <figure class="pub-figure" data-lightbox-figure tabindex="0" role="button" aria-label="Enlarge illustrative cellar cask handpulls photograph">
+            <div class="pub-figure-media-wrap">
+              <span class="pub-ill-badge">Illustrative image</span>
+              <span class="pub-zoom-pill" aria-hidden="true">Enlarge ⤢</span>
+              <img
+                src="images/detail-1.jpg"
+                alt="Gleaming brass cask handpulls and amber pint on a polished mahogany bar in Georgian window light"
+                width="1200"
+                height="896"
+                loading="lazy"
+              >
+            </div>
+            <figcaption>
+              Illustrative image — afternoon cask &amp; craft bar tables for daytime dining and televised live sport.
+            </figcaption>
+          </figure>
+
+          <figure class="pub-figure" data-lightbox-figure tabindex="0" role="button" aria-label="Enlarge illustrative bottle-green party snug booth photograph">
+            <div class="pub-figure-media-wrap">
+              <span class="pub-ill-badge">Illustrative image</span>
+              <span class="pub-zoom-pill" aria-hidden="true">Enlarge ⤢</span>
+              <img
+                src="images/detail-2.jpg"
+                alt="Candlelit bottle-green buttoned leather party snug booth with brass lamp glow"
+                width="1200"
+                height="896"
+                loading="lazy"
+              >
+            </div>
+            <figcaption>
+              Illustrative image — pre-booked bottle-green buttoned leather party snug booths for weekend celebrations.
+            </figcaption>
+          </figure>
+        </div>
         <div class="enquiry-grid">
           <aside class="broadsheet-card" aria-label="Booking guidance and contact details">
             <span class="kicker">No. 24 Reservation Ledger</span>
@@ -335,18 +379,36 @@
 
       <div class="footer-disclaimers">
         <p><strong>Concept Website Disclaimer:</strong> This is an independent concept demonstration created by Mark Aszkenasy and is not the official website of Osbournes.</p>
-        <p><strong>Illustrative Imagery Credit:</strong> Pub interior and food photographs shown in this demonstration are AI-generated illustrative images created for layout preview purposes.</p>
+        <p><strong>Illustrative Imagery Credit:</strong> Pub interior, cellar handpull, party snug, and food photographs shown in this demonstration are AI-generated illustrative images created for layout preview purposes.</p>
         <p>Design by Mark Aszkenasy</p>
       </div>
     </div>
   </footer>
 
-  <!-- Solid Opaque Sticky Mobile Action Bar -->
+  <!-- Solid Frosted Sticky Mobile Action Bar -->
   <nav class="mobile-action-bar" aria-label="Quick venue actions">
     <a class="mobile-bar-btn" href="menus.html">Menus</a>
     <a class="mobile-bar-btn" href="index.html#find-us">Find Us</a>
     <a class="mobile-bar-btn bar-cta" href="#booking-enquiry">Book Table</a>
   </nav>
+
+  <div id="micro-toast" class="micro-toast" role="status" aria-live="polite"></div>
+
+  <dialog id="photo-lightbox" class="photo-lightbox" aria-label="Illustrative photograph preview">
+    <div class="lightbox-shell">
+      <div class="lightbox-topbar">
+        <span class="lightbox-ill-tag">Illustrative image</span>
+        <button type="button" class="lightbox-close" data-lightbox-close aria-label="Close photo preview">✕</button>
+      </div>
+      <div class="lightbox-stage">
+        <img id="lightbox-img" src="images/detail-2.jpg" alt="" width="1200" height="896">
+      </div>
+      <div class="lightbox-foot">
+        <p id="lightbox-caption" class="lightbox-caption"></p>
+        <a class="btn btn-copper btn-sm" id="lightbox-cta" href="#booking-enquiry" data-lightbox-jump>Jump to Booking Form →</a>
+      </div>
+    </div>
+  </dialog>
 
   <script src="js/main.js"></script>
 </body>
