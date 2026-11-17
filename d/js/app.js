@@ -64,6 +64,23 @@
   }
   show(0);
 
+  /* The pint pours as the booking is filled in, and gets its head when it's sent */
+  var pint = document.querySelector('[data-pint]'), say = document.querySelector('[data-pint-say]');
+  var touched = {};
+  var lines = ['Fill in the form to pour your pint', 'Pouring…', 'Halfway there…', 'Nearly full…', 'Just the head to go…', 'Ready. Send it!'];
+  function pour() {
+    var f = form.elements, n = 0;
+    ['type', 'day', 'guests'].forEach(function (k) { if (touched[k]) n++; });
+    if (f.name.value.trim()) n++;
+    if (f.phone.value.trim()) n++;
+    pint.style.setProperty('--fill', (8 + n * 16) + '%');
+    pint.classList.remove('is-full');
+    say.textContent = lines[n];
+  }
+  form.addEventListener('input', function (e) { if (e.target.name) touched[e.target.name] = true; pour(); });
+  form.addEventListener('change', function (e) { if (e.target.name) touched[e.target.name] = true; pour(); });
+  pour();
+
   form.addEventListener('submit', function (e) {
     e.preventDefault();
     var f = form.elements, err = document.querySelector('[data-book-error]'), stub = document.querySelector('[data-stub]');
@@ -72,6 +89,7 @@
     document.querySelector('[data-stub-who]').textContent = f.name.value.trim() + ' + ' + (f.guests.value === '10+' ? '9 or more' : (parseInt(f.guests.value, 10) - 1));
     document.querySelector('[data-stub-what]').textContent = f.type.value + ' · ' + longDate(days[parseInt(f.day.value, 10)]) + ' · Demo only, nothing sent';
     stub.classList.remove('is-printed'); void stub.offsetWidth; stub.classList.add('is-printed');
+    pint.style.setProperty('--fill', '100%'); pint.classList.add('is-full'); say.textContent = 'Cheers! See you ' + longDate(days[parseInt(f.day.value, 10)]).split(' ')[0] + '.';
     if (window.matchMedia('(max-width: 859px)').matches) stub.scrollIntoView({ behavior: 'smooth', block: 'center' });
   });
 })();

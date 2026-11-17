@@ -252,3 +252,20 @@ button { cursor: pointer; }
   .clips { grid-template-columns: repeat(3, 1fr); }
   .book__grid { grid-template-columns: 1.2fr 1fr; gap: 4rem; align-items: center; }
 }
+
+/* Pint that pours as the booking form is filled in */
+.book__side { display: grid; gap: 1.5rem; align-content: start; }
+.pint { --fill: 8%; display: flex; align-items: flex-end; gap: 1rem; justify-content: center; }
+.pint__glass { position: relative; width: 74px; height: 128px; clip-path: polygon(0 0, 100% 0, 88% 100%, 12% 100%); background: rgba(255,255,255,.55); flex: none; }
+.pint__edge { position: absolute; inset: 0; width: 100%; height: 100%; color: var(--ink); z-index: 2; }
+.pint__beer { position: absolute; left: 0; right: 0; bottom: 0; height: var(--fill); background: linear-gradient(90deg, #C9790F, #E9A322 45%, #C9790F); transition: height .7s cubic-bezier(.3,1.3,.5,1); overflow: hidden; }
+.pint__beer i { position: absolute; bottom: -6px; width: 5px; height: 5px; border-radius: 50%; background: rgba(255,255,255,.7); animation: fizz 2.2s linear infinite; }
+.pint__beer i:nth-child(1) { left: 22%; } .pint__beer i:nth-child(2) { left: 40%; animation-delay: .5s; } .pint__beer i:nth-child(3) { left: 58%; animation-delay: 1.1s; } .pint__beer i:nth-child(4) { left: 72%; animation-delay: 1.6s; } .pint__beer i:nth-child(5) { left: 32%; animation-delay: .8s; }
+@keyframes fizz { to { transform: translateY(-140px); opacity: 0; } }
+.pint__head { position: absolute; left: 0; right: 0; bottom: var(--fill); height: 10px; background: #FFF6E2; transition: bottom .7s cubic-bezier(.3,1.3,.5,1), height .5s ease; }
+.pint.is-full .pint__head { bottom: calc(100% - 22px); height: 22px; border-radius: 0 0 4px 4px; }
+.pint.is-full .pint__glass { animation: clink .5s .5s ease-in-out; }
+@keyframes clink { 30% { transform: rotate(-8deg); } 70% { transform: rotate(5deg); } }
+.pint__say { font-family: var(--font-serif); font-style: italic; font-size: 1.15rem; max-width: 12rem; margin: 0 0 .4rem; }
+.pint.is-full .pint__say { font-weight: 700; color: var(--accent); }
+@media (prefers-reduced-motion: reduce) { .pint__beer, .pint__head { transition: none; } .pint__beer i, .pint.is-full .pint__glass { animation: none; } }
